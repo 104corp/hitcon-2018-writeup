@@ -91,3 +91,11 @@ Pick second and third bytes from packed floats and get key
 ```
 {1O4_lNF0SEC_EXCE11ENT_0EBCC73CF61D17586511F2F198835D26}
 ```
+
+# Patch
+```python
+a = open('flag_unpatch.png', 'rb').read()
+b = open('patch.bin', 'rb').read()
+c = a[:326875]+b+a[326875:]
+open('flag_patched.png', 'wb').write(c)
+```
